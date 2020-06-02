@@ -1,0 +1,101 @@
+h1::before {
+  content: '# ';
+}
+
+h2::before {
+  content: '## ';
+}
+
+h3::before {
+  content: '### ';
+}
+
+h4::before {
+  content: '#### ';
+}
+
+h5::before {
+  content: '##### ';
+}
+
+h6::before {
+  content: '###### ';
+}
+
+blockquote::after {
+  content: ">\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>";
+  white-space: pre;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+blockquote {
+  position: relative;
+  padding-inline-start: 1rem;
+  overflow-y: hidden;
+}
+
+blockquote > * {
+  margin: 0 auto;
+}
+
+@counter-style unordered-list {
+  system: cyclic;
+  symbols: '-';
+  suffix: ' ';
+}
+
+ul > li {
+  list-style-type: unordered-list;
+}
+
+@counter-style ordered-list {
+  system: cyclic;
+  symbols: '1';
+  suffix: '. ';
+}
+
+ol > li {
+  list-style-type: ordered-list;
+}
+
+pre > code::before,
+pre > code::after {
+  content: '```';
+}
+
+hr {
+  border: none;
+}
+
+hr::before {
+  content: '* * *';
+}
+
+a::before {
+  content: '[';
+}
+
+a::after {
+  content: '](' attr(href) ')';
+}
+
+a[title]::after {
+  content: '](' attr(href) ' "' attr(title) '")';
+}
+
+em::before,
+em::after {
+  content: '_';
+}
+
+strong::before,
+strong::after {
+  content: '**';
+}
+
+code::before,
+code::after {
+  content: '`';
+}
