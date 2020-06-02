@@ -65,12 +65,12 @@ pre > code::after {
   content: '```';
 }
 
-hr {
-  border: none;
-}
-
 hr::before {
   content: '* * *';
+}
+
+hr {
+  border: none;
 }
 
 a::before {
